@@ -1,3 +1,4 @@
+---
 title: Web-Based-Text-Extraction-and-Retrieval-System
 emoji: 📄  # You can choose any emoji that represents your app
 colorFrom: blue  # Start color for the gradient background
@@ -6,6 +7,7 @@ sdk: streamlit  # Your app uses Streamlit
 sdk_version: "1.21.0"  # Version of Streamlit you are using
 app_file: app.py  # Entry point of your application
 pinned: false
+---
 
 # Web-Based Text Extraction and Retrieval System
 
