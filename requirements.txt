@@ -10,3 +10,4 @@ accelerate>=0.26.0
 safetensors
 streamlit
 easyocr
+numpy==1.23.2
