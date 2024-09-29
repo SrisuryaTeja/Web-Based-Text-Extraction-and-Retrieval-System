@@ -1,3 +1,12 @@
+title: {{title}}
+emoji: {{emoji}}
+colorFrom: {{colorFrom}}
+colorTo: {{colorTo}}
+sdk: {{sdk}}
+sdk_version: "{{sdkVersion}}"
+app_file: app.py
+pinned: false
+
 # Web-Based Text Extraction and Retrieval System
 
 This project is a web application that performs Optical Character Recognition (OCR) on images and highlights keywords within the extracted text. The system supports both English and Hindi languages, allowing users to upload images, extract text, and search for specific keywords within the extracted content.
