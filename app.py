@@ -22,10 +22,16 @@ def get_text(image_file, _model, _tokenizer):
 
 @st.cache_data
 def extract_text_easyocr(_image):
-    reader = easyocr.Reader(['hi'],gpu = False)
-    results = reader.readtext(np.array(_image))
-    # return results
-    return " ".join([result[1] for result in results])
+    try:
+        reader = easyocr.Reader(['hi'], gpu=False)
+        if reader is None:
+            raise ValueError("Failed to create EasyOCR reader.")
+        results = reader.readtext(np.array(_image))
+        return " ".join([result[1] for result in results])
+    except Exception as e:
+        st.error(f"Error extracting text: {e}")
+        return ""
+
 
 @st.cache_resource
 def model():
@@ -57,6 +63,16 @@ def generate_unique_colors(n):
             color = "#{:06x}".format(random.randint(0, 0xFFFFFF))
         colors.append(color)
     return colors
+
+
+with st.sidebar:
+    st.title("Instructions")
+
+    st.write("1. Choose a language(English or Hindi)")
+    st.write("2. Upload an image in JPG, PNG, or JPEG format.")
+    st.write("3. The app will extract text from the image using OCR.")
+    st.write("4. Enter keywords to search within the extracted text.")
+    st.write("5. If needed, click 'Reset' to upload a new image/change language.")
 
 st.title("A Web-Based Text Extraction and Retrieval System")
 
