@@ -1,3 +1,14 @@
+---
+title: Web-Based-Text-Extraction-and-Retrieval-System
+emoji: 📄  # You can choose any emoji that represents your app
+colorFrom: blue  # Start color for the gradient background
+colorTo: green  # End color for the gradient background
+sdk: streamlit  # Your app uses Streamlit
+sdk_version: "1.21.0"  # Version of Streamlit you are using
+app_file: app.py  # Entry point of your application
+pinned: false
+---
+
 # Web-Based Text Extraction and Retrieval System
 
 This project is a web application that performs Optical Character Recognition (OCR) on images and highlights keywords within the extracted text. The system supports both English and Hindi languages, allowing users to upload images, extract text, and search for specific keywords within the extracted content.
